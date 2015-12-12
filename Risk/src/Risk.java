@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 public class Risk {
 	
+	/**
+	 * @author Liam
+	 * @param a an integer to be compared
+	 * @param b an integer to be compared
+	 * @return The maximum integer among the two integer parameters
+	 */
 	public static int getMax(int a, int b) {
 		
 		if (b > a) {
@@ -15,12 +21,24 @@ public class Risk {
 			return a;
 		}
 	}
-
+	
+	/**
+	 * @author Liam
+	 * @param a an integer to be compared
+	 * @param b an integer to be compared
+	 * @param c an integer to be compared
+	 * @return The maximum integer among the three integer parameters
+	 */
 	public static int getMax(int a, int b, int c) {
 		
 		return getMax(getMax(a, b), c);
 	}
 	
+	/**
+	 * @author Liam
+	 * @param arr an array of dice rolls
+	 * @return The highest roll from an array of dice rolls
+	 */
 	public static int getMax(int [] arr) {
 		
 		int max = arr [0];
@@ -36,6 +54,11 @@ public class Risk {
 		return max;
 	}
 	
+	/**
+	 * @author Liam
+	 * @param arr an array of dice rolls
+	 * @return The second highest roll from an array of dice rolls
+	 */
 	public static int secondMax(int [] arr) {
 		
 		int max1 = getMax(arr);
@@ -71,17 +94,34 @@ public class Risk {
 		}
 	}
 	
+	/**
+	 * @author Liam
+	 * The execution of the code. It will ask if you want a fight to the death in which case the program will
+	 * run the simulation without pause. If you choose to not to fight to the death you can pause and assess
+	 * the remaining number of forces on each side as you run the simulation and exit (retreat) at any point.
+	 */
 	public static void main(String[] args) {
 		
 		boolean fightToDeath;
+		
+		String userInteraction;
 		
 		Scanner userInput = new Scanner(System.in);
 		
 		boolean repeat = true;
 		
 		//Initialize Deathmatch
-		System.out.println("Fight to the death? ");
-		fightToDeath = userInput.nextBoolean();
+		System.out.println("Fight to the death? (y/n) ");
+		userInteraction = userInput.nextLine();
+		
+		if (userInteraction == "y"){
+			
+			fightToDeath = true;
+		}
+		else {
+			
+			fightToDeath = false;
+		}
 		
 		//Initialize Attackers and Defenders
 		System.out.println("Please enter the number of attacking troops "
