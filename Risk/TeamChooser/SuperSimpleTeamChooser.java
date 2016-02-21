@@ -8,6 +8,8 @@
  */
 public class SuperSimpleTeamChooser {
 	
+	private static final int numChosenTeams = 3;
+	
 	private static String[] teams = {"Central", "Highland", "Como",
 									"Washington", "OWL", "Harding",
 									"Humboldt", "Party Crasher"};
@@ -112,7 +114,7 @@ public class SuperSimpleTeamChooser {
 
 	public static void main(String[] args) {
 		
-		chooseTeam(3);
+		chooseTeam(numChosenTeams);
 	}
 
 }
