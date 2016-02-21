@@ -114,7 +114,7 @@ public class Risk {
 		System.out.println("Fight to the death? (y/n) ");
 		userInteraction = userInput.nextLine();
 		
-		if (userInteraction == "y"){
+		if (userInteraction.charAt(0) == 'y'){
 			
 			fightToDeath = true;
 		}
@@ -136,7 +136,7 @@ public class Risk {
 		while (repeat) {
 			
 			//Protect number of attackers and defenders from becoming less than zero.
-			if (attackers <= 0 || defenders <= 0) {
+			if (attackers <= 1 || defenders <= 0) {
 				
 				break;
 			}
