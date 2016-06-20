@@ -231,7 +231,7 @@ public class BlackJack {
 			}
 			else {
 				
-				while (cardValue(player) > cardValue(dealer) && cardValue(dealer) < 21) {
+				while ((cardValue(player) > cardValue(dealer) || (cardValue(player) == cardValue(dealer) && cardValue(dealer) <= 14)) && cardValue(dealer) < 21) {
 					
 					hit(dealer);
 				}
@@ -282,6 +282,6 @@ public class BlackJack {
 			dealer.clear();
 		}
 		
-		System.out.println("You're broke, your job's a joke, and your love life's DOA. Just go back to binging friends on Netflix on Friday nights. You're no gambler.");
+		System.out.println("You're broke, your job's a joke, and your love life's DOA. Just go back to binging \"Friends\" on Netflix on Friday nights. You're no gambler.");
 	}
 }
