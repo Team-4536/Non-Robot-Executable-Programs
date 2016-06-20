@@ -125,7 +125,7 @@ public class Risk {
 		
 		//Initialize Attackers and Defenders
 		System.out.println("Please enter the number of attacking troops "
-							+ "and defending troops: ");
+							+ "and defending troops (total troops in each territory): ");
 		int attackers = userInput.nextInt();
 		int defenders = userInput.nextInt();
 		
@@ -234,8 +234,8 @@ public class Risk {
 			System.out.println("\n\nBattle Statistics: ");
 			System.out.println("Attackers Left: " + attackers);
 			System.out.println("Defenders Left: " + defenders);
-			System.out.println("Attackers Lost: " + attackersLost);
-			System.out.println("Defenders Lost: " + defendersLost);
+			System.out.println("Total Attackers Lost: " + attackersLost);
+			System.out.println("Total Defenders Lost: " + defendersLost);
 			
 			if (!fightToDeath) {
 				
